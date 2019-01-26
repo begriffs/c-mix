@@ -1,11 +1,11 @@
 ## Is it a C project or a Haskell project?
 
-Look at this, you can mix C and Haskell. The main program is C, but
-other parts can be Haskell. Useful when automatic memory management,
-great numeric libraries, unicode support, or parsing is useful for
-some parts of the code. Then other parts can be C where an imperative
-algorithm is the easiest way to do something, or where memory should be
-managed more carefully.
+The main program is C, but selected functions can be Haskell. For those
+parts where automatic memory management, great numeric libraries,
+containers, Unicode support, or parsing is useful, do it with
+Haskell. For other parts where an imperative algorithm is the easiest
+way to do something, or where memory should be managed more carefully,
+do it in C.
 
 This approach doesn't even use Cabal, just a portable makefile and the
 functionality of GHC itself. The Haskell code has access to a useful set of
