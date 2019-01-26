@@ -1,6 +1,7 @@
 #include <HsFFI.h>
 #include <stdio.h>
 
+/* auto-generated at compilation time */
 #include "hello_stub.h"
 
 int main(int argc, char **argv)

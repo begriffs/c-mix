@@ -7,7 +7,7 @@ CFLAGS = -pgmc cc -optc -std=c99 -optc -Wall
 .SUFFIXES :
 .SUFFIXES : .o .hs .hi
 
-hello : main.c hello_stub.h $(OBJS)
+hello : main.c $(OBJS)
 	$(HC) -no-hs-main $(HFLAGS) $(CFLAGS) -o $@ main.c $(OBJS) $(PKGS)
 
 clean :
