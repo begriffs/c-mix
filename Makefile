@@ -11,7 +11,7 @@ hello : main.c $(OBJS)
 	$(HC) -no-hs-main $(HFLAGS) $(CFLAGS) -o $@ main.c $(OBJS) $(PKGS)
 
 clean :
-	rm $(OBJS) hello
+	rm $(OBJS) hello hello_stub.h main.o
 
 .hs.o:
 	$(HC) -ohi /dev/null $(HFLAGS) -c $<
