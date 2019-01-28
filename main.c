@@ -6,11 +6,14 @@
 
 int main(int argc, char **argv)
 {
-	hs_init(&argc, &argv);
-
 	long long x;
 
-	printf("Enter a number: ");
+	hs_init(&argc, &argv);
+
+	puts("First, the current directory.");
+	printDir();
+
+	printf("Now enter a number: ");
 	scanf("%lld", &x);
 	printf("%lld! = %lld\n", x, fact(x));
 
