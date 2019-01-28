@@ -8,8 +8,11 @@ int main(int argc, char **argv)
 {
 	hs_init(&argc, &argv);
 
-	puts("Hi from C...");
-	sayhi();
+	long long x;
+
+	printf("Enter a number: ");
+	scanf("%lld", &x);
+	printf("%lld! = %lld\n", x, fact(x));
 
 	hs_exit();
 	return 0;

@@ -1,10 +1,14 @@
 module Hello where
 
 import System.Directory
+import Foreign.C.Types
 
-sayhi = do
+printDir = do
   fs <- listDirectory "."
-  putStrLn "Hello, C, it's Haskell!"
   mapM_ putStrLn fs
 
-foreign export ccall sayhi :: IO ()
+fact :: CLLong -> CLLong
+fact n = product [1..n]
+
+foreign export ccall printDir :: IO ()
+foreign export ccall fact :: CLLong -> CLLong
